@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import NavBar from "./components/NavBar";
+import SideNav from "./components/SideNav";
+import { Typewriter } from "react-simple-typewriter";
+import SideAccordion from "./components/SideAccordion";
 
 export default function App() {
   const [mousePosition, setMousePosition] = useState({
@@ -36,23 +38,43 @@ export default function App() {
   return (
     <div className="cursor-none">
       <section className="grid grid-cols-12 h-screen">
-        <NavBar />
+        <SideNav />
 
         <main
           onMouseEnter={textEnter}
           onMouseLeave={textLeave}
-          className="h-full col-span-8 overflow-hidden p-48 text-center"
+          className="h-full col-span-8 overflow-hidden flex flex-col gap-y-4 items-start justify-end pb-20 "
         >
-          <h1 className="text-7xl text-black uppercase font-test relative z-10">
+          <h1 className="font-Montserrat text-7xl font-black text-primary uppercase font-test relative z-10">
             IM MASOUME <br /> MOHEBBI.
           </h1>
+          <div className="font-paceMono">
+            Im a freelance{" "}
+            <span className="text-primary bg-[#f7bf00] p-2 text-[18px]">
+              <Typewriter
+                words={[
+                  "front end engineer.",
+                  "web developer.",
+                  "coffee drinker.",
+                ]}
+                loop={0}
+                typeSpeed={120}
+                deleteSpeed={80}
+                delaySpeed={1000}
+                cursorStyle="|"
+                cursor
+              />
+            </span>
+            <br />
+            From IR.
+          </div>
           {/* <div
           ref={magicRef}
           className="magic bg-[url('/src/assets/images/background.jpg')] absolute w-40 h-40  bg-center bg-no-repeat bg-fixed rounded-full z-5"
         ></div> */}
         </main>
 
-        <aside className="col-span-3 h-full bg-blue-500">aside</aside>
+        <SideAccordion />
       </section>
 
       <motion.div
