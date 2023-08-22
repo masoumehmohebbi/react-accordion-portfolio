@@ -6,6 +6,10 @@ export default {
       colors: {
         primary: "#222",
       },
+      fontFamily: {
+        paceMono: ["Space Mono", "monospace"],
+        Montserrat: ["Montserrat", "sans-serif"],
+      },
     },
   },
   plugins: [],
