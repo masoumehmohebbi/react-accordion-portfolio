@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         paceMono: ["Space Mono", "monospace"],
         Montserrat: ["Montserrat", "sans-serif"],
+        jetbrains: ["JetBrains Mono", "monospace"],
       },
     },
   },
