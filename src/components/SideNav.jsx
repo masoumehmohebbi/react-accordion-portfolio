@@ -8,7 +8,7 @@ import {
 
 function SideNav() {
   return (
-    <nav className="col-span-1 h-full flex flex-col justify-between w-[72px] cursor-default border-r-[1px] border-primary">
+    <nav className=" z-50 cursor-default col-span-1 h-full flex flex-col justify-between w-[72px] border-r-[1px] border-primary">
       <div className="flex items-center justify-center ">
         <BiHomeHeart className="w-11 h-11 mt-1 text-slate-800" />
       </div>
