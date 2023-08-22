@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.cursor {
+  /* z-index: 5; */
+  position: absolute;
+  /* top: calc(50% - 10rem);
+  left: calc(50% - 10rem); */
+  width: 1rem;
+  height: 1rem;
+  background: url("./assets/images/background.jpg") 50% 50% no-repeat fixed;
+  border-radius: 50%;
+  background-size: cover;
+}
