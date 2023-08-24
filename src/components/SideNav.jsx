@@ -14,9 +14,7 @@ function SideNav() {
       </div>
       <ul>
         <li>
-          <a href="#">
-            <DarkModeToggle />
-          </a>
+          <DarkModeToggle />
         </li>
         <li>
           <a href="#">
