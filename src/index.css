@@ -18,7 +18,7 @@
 
 /* SideAccordion.jsx */
 aside div {
-  @apply overflow-hidden flex flex-col items-center border-l-[1px] border-primary justify-between h-full w-[70px] py-11;
+  @apply overflow-hidden text-primary dark:text-secondary flex flex-col items-center border-l-[1px] border-primary dark:border-secondary justify-between h-full w-[70px] py-11;
 }
 aside div h1 {
   @apply font-jetbrains text-2xl duration-200 transition-all ease-out;
