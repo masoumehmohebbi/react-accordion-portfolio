@@ -1,15 +1,33 @@
+/* @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Londrina+Shadow&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Londrina+Shadow&family=Nosifer&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.cursor {
-  /* z-index: 5; */
+/* .cursor {
+  z-index: 5;
   position: absolute;
-  /* top: calc(50% - 10rem);
-  left: calc(50% - 10rem); */
+  top: calc(50% - 10rem);
+  left: calc(50% - 10rem);
   width: 1rem;
   height: 1rem;
   background: url("./assets/images/background.jpg") 50% 50% no-repeat fixed;
   border-radius: 50%;
   background-size: cover;
+} */
+
+/* SideAccordion.jsx */
+aside div {
+  @apply overflow-hidden flex flex-col items-center border-l-[1px] border-primary justify-between h-full w-[70px] py-11;
+}
+aside div h1 {
+  @apply font-jetbrains text-2xl duration-200 transition-all ease-out;
+}
+
+/* SideNav.jsx */
+nav ul li {
+  @apply border-t-[1px] border-primary dark:border-secondary flex items-center justify-center duration-500;
+}
+nav ul li a {
+  @apply py-4 flex items-center justify-center hover:bg-primary dark:hover:bg-secondary dark:hover:text-primary hover:text-secondary dark:text-secondary text-primary w-full duration-500;
 }
