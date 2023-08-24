@@ -23,11 +23,11 @@ export default function App() {
 
   const variants = {
     default: {
-      color: "red",
+      zIndex: 5,
     },
     text: {
-      height: 250,
-      width: 250,
+      height: 240,
+      width: 240,
     },
   };
   const textEnter = () => setCursorVarient("text");
@@ -41,12 +41,12 @@ export default function App() {
         <main
           onMouseEnter={textEnter}
           onMouseLeave={textLeave}
-          className="h-full p-20 flex-1 col-span-8 overflow-hidden flex flex-col gap-y-8 items-start justify-end"
+          className="h-full p-20 w-full col-span-8 overflow-hidden flex flex-col gap-y-8 items-start justify-end"
         >
-          <h1 className="text-primary dark:text-secondary font-Montserrat text-7xl font-black  uppercase font-test relative z-10">
+          <h1 className="font-Montserrat text-primary dark:text-secondary text-7xl font-black  uppercase font-test relative">
             IM MASOUME <br /> MOHEBBI.
           </h1>
-          <div className="font-rubik z-10 text-[14px] text-primary dark:text-secondary">
+          <div className="font-rubik text-[14px] text-primary dark:text-secondary">
             Im a freelance{" "}
             <span className=" bg-[#f7bf00] p-2">
               <Typewriter
