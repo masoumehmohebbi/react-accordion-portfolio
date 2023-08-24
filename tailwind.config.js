@@ -12,6 +12,7 @@ export default {
         jetbrains: ["JetBrains Mono", "monospace"],
         Londrina: ["Londrina Shadow", "cursive"],
         rubik: ["Nosifer", "cursive"],
+        Montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },
