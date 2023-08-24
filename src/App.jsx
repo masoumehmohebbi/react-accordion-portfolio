@@ -34,19 +34,19 @@ export default function App() {
   const textLeave = () => setCursorVarient("default");
 
   return (
-    <div className="dark:bg-primary cursor-none relative h-screen w-full">
-      <section className="grid grid-cols-12 h-full">
+    <div className="dark:bg-primary cursor-none relative h-screen w-full ">
+      <section className="flex h-full justify-between">
         <SideNav />
 
         <main
           onMouseEnter={textEnter}
           onMouseLeave={textLeave}
-          className="h-full col-span-8 overflow-hidden flex flex-col gap-y-8 items-start justify-end pb-20 "
+          className="h-full p-20 flex-1 col-span-8 overflow-hidden flex flex-col gap-y-8 items-start justify-end"
         >
           <h1 className="text-primary dark:text-secondary font-Montserrat text-7xl font-black  uppercase font-test relative z-10">
             IM MASOUME <br /> MOHEBBI.
           </h1>
-          <div className="font-rubik z-20 text-[14px] text-primary dark:text-secondary">
+          <div className="font-rubik z-10 text-[14px] text-primary dark:text-secondary">
             Im a freelance{" "}
             <span className=" bg-[#f7bf00] p-2">
               <Typewriter
@@ -78,7 +78,7 @@ export default function App() {
       <motion.div
         variants={variants}
         animate={cursorVarient}
-        className="cursor -z-20 absolute w-4 h-4 bg-[url('/src/assets/images/background.jpg')] bg-[50%_50%] bg-fixed rounded-full bg-no-repeat bg-cover"
+        className="cursor -z-20 dark:z-[5] absolute w-4 h-4 bg-[url('/src/assets/images/background.jpg')] bg-[50%_50%] bg-fixed rounded-full bg-no-repeat bg-cover"
         ref={magic}
       ></motion.div>
     </div>
