@@ -19,64 +19,34 @@ export default function App() {
     };
   }, []);
 
-  // const [mousePosition, setMousePosition] = useState({
-  //   x: 0,
-  //   y: 0,
-  // });
   const [cursorVarient, setCursorVarient] = useState("default");
-
-  // useEffect(() => {
-  //   const mouseMove = (e) => {
-  //     // setMousePosition({ x: e.clientX, y: e.clientY
-  //     //  });
-  //   };
-  //   window.addEventListener("mousemove", mouseMove);
-  //   return () => {
-  //     window.removeEventListener("mousemove", mouseMove);
-  //   };
-  // }, []);
 
   const variants = {
     default: {
-      // x: mousePosition.x - 16,
-      // y: mousePosition.y - 16,
       color: "red",
     },
     text: {
-      color: "red",
-
       height: 250,
       width: 250,
-      // x: mousePosition.x - 75,
-      // y: mousePosition.y - 75,
-      // backgroundColor: "yellow",
-      // background: "center center no-repeat fixed",
-      // backgroundImage: "url('/src/assets/images/background.jpg')",
-
-      // backgroundRepeat: "no-repeat",
-      // backgroundAttachment: "fixed",
-      // backgroundPosition: "center",
-      // position: "absolute",
-      // mixBlendMode: "difference",
     },
   };
   const textEnter = () => setCursorVarient("text");
   const textLeave = () => setCursorVarient("default");
 
   return (
-    <div className="cursor-none relative h-screen w-full">
+    <div className="dark:bg-primary cursor-none relative h-screen w-full">
       <section className="grid grid-cols-12 h-full">
         <SideNav />
 
         <main
           onMouseEnter={textEnter}
           onMouseLeave={textLeave}
-          className="h-full col-span-8 overflow-hidden flex flex-col gap-y-4 items-start justify-end pb-20 "
+          className="h-full col-span-8 overflow-hidden flex flex-col gap-y-8 items-start justify-end pb-20 "
         >
-          <h1 className="text-primary font-Montserrat text-7xl font-black  uppercase font-test relative z-10">
+          <h1 className="text-primary dark:text-secondary font-Montserrat text-7xl font-black  uppercase font-test relative z-10">
             IM MASOUME <br /> MOHEBBI.
           </h1>
-          <div className=" text-primary font-paceMono z-20 font-bold text-[18px]">
+          <div className="font-rubik z-20 text-[14px] text-primary dark:text-secondary">
             Im a freelance{" "}
             <span className=" bg-[#f7bf00] p-2">
               <Typewriter
@@ -105,15 +75,10 @@ export default function App() {
         <SideAccordion />
       </section>
 
-      {/* <motion.div
-        variants={variants}
-        animate={cursorVarient}
-        className="cursor w-4 h-4 bg-[url('/src/assets/images/background.jpg')] bg-fixed rounded-full  top-0 left-0 pointer-events-none bg-primary absolute"
-      ></motion.div> */}
       <motion.div
         variants={variants}
         animate={cursorVarient}
-        className="cursor"
+        className="cursor -z-20 absolute w-4 h-4 bg-[url('/src/assets/images/background.jpg')] bg-[50%_50%] bg-fixed rounded-full bg-no-repeat bg-cover"
         ref={magic}
       ></motion.div>
     </div>
