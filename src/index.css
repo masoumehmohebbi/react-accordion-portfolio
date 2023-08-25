@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 /* SideAccordion.jsx */
-aside div {
+aside main {
   @apply overflow-hidden text-primary dark:text-secondary flex flex-col items-center border-l-[1px] border-primary dark:border-secondary justify-between h-full w-[70px] py-9;
 }
-aside div h1 {
+aside main h1 {
   @apply font-jetbrains text-2xl duration-200 transition-all ease-out;
 }
 
