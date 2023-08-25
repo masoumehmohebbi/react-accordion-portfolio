@@ -4,6 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Forms */
+input[type="text"],
+input[type="email"],
+textarea {
+  @apply border-b-[1px] border-primary dark:border-secondary  bg-transparent;
+}
+
 /* SideAccordion.jsx */
 aside main {
   @apply overflow-hidden text-primary dark:text-secondary flex flex-col items-center border-l-[1px] border-primary dark:border-secondary justify-between h-full w-[70px] py-9;
