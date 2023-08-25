@@ -43,11 +43,13 @@ function AccordionItem({ banner, setOpen, open }) {
       key={banner.id}
       onClick={() => setOpen(banner.id === open ? null : banner.id)}
     >
-      <mask
+      {/* <mask
         className={
-          isOpen ? " border-r-[5px] border-primary absolute h-1/4 right-0" : ""
+          isOpen
+            ? " border-r-[5px] border-primary dark:border-secondary absolute h-1/4 right-0"
+            : ""
         }
-      ></mask>
+      ></mask> */}
       <section className="flex overflow-hidden">
         <main>
           <h1 className="group-hover:-ml-12 group-hover:text-lg group-hover:scale-[3.3] group-hover:font-Londrina">
@@ -58,7 +60,9 @@ function AccordionItem({ banner, setOpen, open }) {
           </h2>
         </main>
         {isOpen ? (
-          <article className="w-[64.9rem]">{banner.component}</article>
+          <article className="w-[64.9rem] overflow-y-visible overflow-x-hidden">
+            {banner.component}
+          </article>
         ) : (
           ""
         )}
