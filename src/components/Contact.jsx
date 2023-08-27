@@ -1,12 +1,7 @@
-import {
-  BiMailSend,
-  BiMap,
-  BiPhoneCall,
-  BiLogoInstagram,
-  BiLogoLinkedin,
-  BiLogoGithub,
-  BiLogoTelegram,
-} from "react-icons/bi";
+import { BiMailSend, BiMap, BiPhoneCall } from "react-icons/bi";
+import Footer from "./Footer";
+import { useState } from "react";
+import Loader from "./Loader";
 
 function Contact() {
   return (
@@ -87,27 +82,9 @@ function Details() {
   );
 }
 
-// Footer
-function Footer() {
-  return (
-    <footer className="mt-4">
-      <div className="h-[1px] w-11/12 bg-primary dark:bg-secondary mx-auto"></div>
-
-      <div className="flex flex-col text-primary dark:text-secondary gap-y-6 w-full items-end mt-6 p-5">
-        <h5>© 2023 Masoumeh Mohebbi | Portfolio.</h5>
-        <span className="flex gap-x-5 text-2xl ">
-          <BiLogoInstagram />
-          <BiLogoTelegram />
-          <BiLogoLinkedin />
-          <BiLogoGithub />
-        </span>
-      </div>
-    </footer>
-  );
-}
-
 // Map
 function Map() {
+  const [loaded, setLoaded] = useState(true);
   return (
     <section className="mt-16 text-primary dark:text-secondary">
       <h1 className=" font-Montserrat px-11 py-4 text-3xl font-bold">
@@ -115,13 +92,14 @@ function Map() {
         GET IN TOUCH
       </h1>
       <div className="h-[1px] w-11/12 bg-primary dark:bg-secondary mx-auto"></div>
+      {loaded && <Loader />}
       <iframe
+        onLoad={() => setLoaded(!loaded)}
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6349.957596401076!2d49.59718440074156!3d37.27192985743835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ff5620d43f15675%3A0x41dd40f9931cfbf6!2z2LHYtNiq2Iwg2KfYs9iq2KfZhiDar9uM2YTYp9mG2Iwg2KfbjNix2KfZhg!5e0!3m2!1sfa!2snl!4v1692967977726!5m2!1sfa!2snl"
-        width="950"
-        height="300"
         allowfullscreen=""
         loading="lazy"
-        className="border border-primary m-11"
+        className={`border border-primary m-11 duration-500 
+        ${loaded ? "opacity-0 w-0 h-0" : "opacity-100 w-[90%] h-[300px]"}`}
       ></iframe>
     </section>
   );
