@@ -1,5 +1,5 @@
 function Portfolio() {
-  return <div>Portfolio</div>;
+  return <div>portfolio</div>;
 }
 
 export default Portfolio;
