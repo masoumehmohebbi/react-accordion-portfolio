@@ -1,9 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
 import SideNav from "./components/SideNav";
 import { Typewriter } from "react-simple-typewriter";
 import SideAccordion from "./components/SideAccordion";
-
+import { motion } from "framer-motion";
 export default function App() {
   const magic = useRef(null);
 
