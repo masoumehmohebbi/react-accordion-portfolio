@@ -16,7 +16,7 @@ function SideAccordion() {
   return (
     <aside
       className={`cursor-grabbing z-50 h-full flex absolute right-0 
-    ${open ? "bg-secondary dark:bg-primary" : ""} `}
+    ${open ? "bg-secondary dark:bg-primary " : ""} `}
     >
       {accordionBanner.map((banner) => (
         <AccordionItem
