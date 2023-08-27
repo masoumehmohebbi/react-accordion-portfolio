@@ -7,6 +7,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import { BiDownload } from "react-icons/bi";
 import Footer from "./Footer";
 import { useState } from "react";
+import SkillBar from "./SkillBar";
 
 function About() {
   return (
@@ -45,6 +46,8 @@ function About() {
         </div>
       </section>
 
+      <div className="my-11 h-[1px] w-11/12 bg-primary dark:bg-secondary mx-auto"></div>
+      <SkillBar />
       <div className="my-5 h-[1px] w-11/12 bg-primary dark:bg-secondary mx-auto"></div>
 
       <SliderText />
