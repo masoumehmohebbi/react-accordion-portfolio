@@ -8,7 +8,7 @@
 input[type="text"],
 input[type="email"],
 textarea {
-  @apply border-b-[1px] border-primary dark:border-secondary  bg-transparent;
+  @apply border-b-[1px] border-primary dark:border-secondary  bg-transparent outline-none;
 }
 
 /* SideAccordion.jsx */
@@ -26,3 +26,26 @@ nav ul li {
 nav ul li a {
   @apply py-4 flex items-center justify-center hover:bg-primary dark:hover:bg-secondary dark:hover:text-primary hover:text-secondary dark:text-secondary text-primary w-full duration-500;
 }
+
+/* Slider alice-carousel  */
+.alice-carousel__dots-item {
+  display: none !important;
+}
+.alice-carousel__prev-btn-wrapper,
+.alice-carousel__next-btn-wrapper {
+  position: relative;
+  left: 310px;
+}
+.alice-carousel__prev-btn-wrapper p,
+.alice-carousel__next-btn-wrapper p {
+  border: 2px solid #222;
+  padding: 0px 10px;
+}
+.alice-carousel__prev-btn-wrapper p span,
+.alice-carousel__next-btn-wrapper p span {
+  font-size: 26px;
+  color: #000;
+}
+/* .alice-carousel {
+  width: auto;
+} */
