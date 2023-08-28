@@ -14,7 +14,7 @@ export default function SkillBar() {
     setToggleState(id);
   };
   return (
-    <section className="mt-11 h-screen relative">
+    <section className="mt-24 h-[90vh] relative">
       {tabData &&
         tabData.map((tab) => (
           <div key={tab.id} className="flex m-6 h-[140px]">
