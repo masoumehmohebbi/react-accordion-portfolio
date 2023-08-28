@@ -11,14 +11,11 @@ import SkillBar from "./SkillBar";
 
 function About() {
   return (
-    <section className="w-full dark:text-secondary">
-      <h1 className=" font-Montserrat px-11 py-4 text-3xl font-bold uppercase">
-        {" "}
-        About me
-      </h1>
+    <section className="w-full dark:text-secondary font-jetbrains">
+      <h1 className="px-11 py-4 text-3xl font-bold uppercase"> About me</h1>
       <div className="h-[1px] w-11/12 bg-primary dark:bg-secondary mx-auto"></div>
 
-      <section className="flex justify-between mt-7 gap-x-11">
+      <section className="flex flex-col lg:flex-row justify-between mt-7 gap-x-11">
         <SliderImage />
 
         <div className="flex flex-col w-1/2 font-jetbrains pr-14">
@@ -28,7 +25,7 @@ function About() {
           </h1>
           <h5 className="text-sm py-2">Freelancer Extraordinaire</h5>
           <div className="my-4 h-[1px] w-full bg-primary dark:bg-secondary mx-left"></div>
-          <p>
+          <p className="text-xs lg:text-base">
             Vivamus sed nulla volutpat, eleifend quam vel, pulvinar elit.
             Pellentesque habitant morbi tristique senectus et netus et malesuada
             fames ac turpis egestas. Sed faucibus risus lacus, feugiat egestas
@@ -61,10 +58,11 @@ export default About;
 function SliderImage() {
   return (
     <div
-      style={{
-        width: "45%",
-        height: "460px",
-      }}
+      className="w-11/12 lg:w-[45%] h-[460px]"
+      // style={{
+      //   width: "45%",
+      //   height: "460px",
+      // }}
     >
       <AliceCarousel disableDotsControls infinite>
         <img
