@@ -14,7 +14,7 @@ export default function SkillBar() {
     setToggleState(id);
   };
   return (
-    <section className="mt-24 h-[90vh] relative">
+    <section className="mt-24 h-screen relative">
       {tabData &&
         tabData.map((tab) => (
           <div key={tab.id} className="flex m-6 h-[140px]">
@@ -51,10 +51,11 @@ function Progressbar({ value }) {
     { id: 1, title: "html", percent: 90 },
     { id: 2, title: "css", percent: 80 },
     { id: 3, title: "javascript", percent: 70 },
-    { id: 4, title: "tailwindcss", percent: 90 },
-    { id: 5, title: "material ui", percent: 20 },
-    { id: 6, title: "react js", percent: 40 },
-    { id: 7, title: "git & github", percent: 40 },
+    { id: 4, title: "react js", percent: 40 },
+    { id: 5, title: "tailwindcss", percent: 90 },
+    { id: 6, title: "material ui", percent: 20 },
+    { id: 7, title: "bootstrap", percent: 40 },
+    { id: 8, title: "git & github", percent: 50 },
   ]);
 
   const progressTextRef = useRef(null);
