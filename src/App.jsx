@@ -33,8 +33,8 @@ export default function App() {
   const textLeave = () => setCursorVarient("default");
 
   return (
-    <div className="dark:bg-primary cursor-none relative h-screen w-full ">
-      <section className="flex h-full justify-between">
+    <div className="dark:bg-primary cursor-none relative h-screen w-screen ">
+      <section className="flex h-full justify-between w-full">
         <SideNav />
 
         <main
@@ -42,7 +42,7 @@ export default function App() {
           onMouseLeave={textLeave}
           className="h-full p-20 w-full col-span-8 overflow-hidden flex flex-col gap-y-8 items-start justify-end"
         >
-          <h1 className="font-Montserrat text-primary dark:text-secondary text-7xl font-black  uppercase font-test relative">
+          <h1 className="font-Montserrat text-primary dark:text-secondary text-5xl lg:text-7xl font-black  uppercase font-test relative">
             IM MASOUME <br /> MOHEBBI.
           </h1>
           <div className="font-rubik text-[14px] text-primary dark:text-secondary">
