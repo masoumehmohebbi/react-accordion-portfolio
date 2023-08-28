@@ -57,13 +57,7 @@ export default About;
 
 function SliderImage() {
   return (
-    <div
-      className="w-11/12 lg:w-[45%] h-[460px]"
-      // style={{
-      //   width: "45%",
-      //   height: "460px",
-      // }}
-    >
+    <div className="w-11/12 lg:w-[45%] h-[460px]">
       <AliceCarousel disableDotsControls infinite>
         <img
           src={image1}
