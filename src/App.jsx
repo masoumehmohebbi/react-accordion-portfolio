@@ -7,18 +7,17 @@ import About from "./components/About";
 
 export default function App() {
   return (
-    <div className="dark:bg-primary cursor-none relative w-full h-full">
-      <section className="flex h-screen justify-between w-full pt-5 lg:pt-0">
+    <section className="dark:bg-primary cursor-none relative w-full h-full overflow-hidden">
+      <div className="flex h-screen justify-between w-full pt-5 lg:pt-0">
         <SideNav />
-
         <Content />
-
         <SideAccordion />
-      </section>
-      <section className="+md:hidden">
+      </div>
+
+      <div className="+md:hidden">
         <About />
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
 
