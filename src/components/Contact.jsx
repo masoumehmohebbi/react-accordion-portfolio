@@ -7,7 +7,7 @@ function Contact() {
   return (
     <section className="font-jetbrains">
       <Map />
-      <div className="flex w-[64.9rem] gap-x-16 p-11">
+      <div className="flex flex-col lg:flex-row w-[64.9rem] gap-x-16 p-11">
         <Messages />
         <Details />
       </div>
@@ -87,10 +87,7 @@ function Map() {
   const [loaded, setLoaded] = useState(true);
   return (
     <section className="mt-16 text-primary dark:text-secondary">
-      <h1 className=" font-Montserrat px-11 py-4 text-3xl font-bold">
-        {" "}
-        GET IN TOUCH
-      </h1>
+      <h1 className="px-11 py-4 text-3xl font-bold"> GET IN TOUCH</h1>
       <div className="h-[1px] w-11/12 bg-primary dark:bg-secondary mx-auto"></div>
       {loaded && <Loader />}
       <iframe
