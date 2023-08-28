@@ -1,5 +1,5 @@
 import { useState } from "react";
-import TodoListAppImg from "../assets/images/todo-list-app.png";
+import TodoListAppImg from "../assets/images/todo_list.png";
 import FitnessAppImg from "../assets/images/react-fitness-app.png";
 import ContactListImg from "../assets/images/react-mui-contactlist-app.png";
 
