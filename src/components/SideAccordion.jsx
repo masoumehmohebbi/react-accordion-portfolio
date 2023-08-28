@@ -4,6 +4,9 @@ import Contact from "./Contact";
 import About from "./About";
 import Portfolio from "./Portfolio";
 
+// import PDFViewer from "tailwind-pdf-viewer";
+// import "tailwind-pdf-viewer/style.css";
+
 function SideAccordion() {
   const [open, setOpen] = useState(null);
 
@@ -15,8 +18,8 @@ function SideAccordion() {
   ]);
   return (
     <aside
-      className={`cursor-grabbing z-50 h-full flex absolute right-0 
-    ${open ? "bg-secondary dark:bg-primary " : ""} `}
+      className={` hidden +md:flex cursor-grabbing z-50 h-full  absolute right-0 top-0
+    ${open ? "bg-secondary dark:bg-primary w-[calc(100%-65px)]" : ""} `}
     >
       {accordionBanner.map((banner) => (
         <AccordionItem
@@ -38,14 +41,14 @@ function AccordionItem({ banner, setOpen, open }) {
   return (
     <div
       className={`overflow-hidden group flex ${
-        isOpen ? "w-[68.1rem] relative" : ""
+        isOpen ? "w-[calc(100%-70px)] relative" : ""
       }`}
     >
       <div
         key={banner.id}
         onClick={() => setOpen(banner.id === open ? null : banner.id)}
       >
-        <section className="flex overflow-hidden h-full">
+        <section className="flex overflow-hidden h-full w-full">
           <main>
             <h1
               className={`${
@@ -61,7 +64,7 @@ function AccordionItem({ banner, setOpen, open }) {
         </section>
       </div>
       {isOpen ? (
-        <article className="w-[64.9rem] overflow-y-visible overflow-x-hidden">
+        <article className="w-[calc(100%-70px)] overflow-y-visible overflow-x-hidden">
           {banner.component}
         </article>
       ) : (
@@ -73,9 +76,8 @@ function AccordionItem({ banner, setOpen, open }) {
 
 // Pdf Viewer Cmp
 function PdfViewer() {
+  // return <PDFViewer pdfURL={pdfFile} />;
   return (
-    <object width="100%" height="100%" data={pdfFile} type="application/pdf">
-      {" "}
-    </object>
+    <object width="100%" height="100%" data={pdfFile} type="application/pdf" />
   );
 }
