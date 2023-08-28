@@ -14,6 +14,9 @@ export default {
         rubik: ["Nosifer", "cursive"],
         Montserrat: ["Montserrat", "sans-serif"],
       },
+      screens: {
+        "+md": { min: "960px" },
+      },
     },
   },
   plugins: [],
