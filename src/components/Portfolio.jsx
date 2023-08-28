@@ -6,9 +6,8 @@ import ContactListImg from "../assets/images/react-mui-contactlist-app.png";
 function Portfolio() {
   const [activeTab, setActiveTab] = useState(1);
 
-  const handleActive = (title, id) => {
+  const handleActive = (id) => {
     setActiveTab(id);
-    console.log(title);
   };
 
   const portfolioData = [
@@ -55,6 +54,7 @@ function Portfolio() {
       content: <ReactProjects portfolioData={portfolioData} />,
     },
   ]);
+
   return (
     <section className="mt-11 font-jetbrains text-primary">
       <div className="flex flex-col">
@@ -66,7 +66,7 @@ function Portfolio() {
               tabData.map((tab) => (
                 <li
                   key={tab.id}
-                  onClick={() => handleActive(tab.title, tab.id)}
+                  onClick={() => handleActive(tab.id)}
                   className={`cursor-pointer ${
                     tab.id === activeTab && "font-black"
                   }`}
