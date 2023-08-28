@@ -46,8 +46,8 @@ function About() {
         </div>
       </section>
 
-      <div className="my-11 h-[1px] w-11/12 bg-primary dark:bg-secondary mx-auto"></div>
       <SkillBar />
+
       <div className="my-5 h-[1px] w-11/12 bg-primary dark:bg-secondary mx-auto"></div>
 
       <SliderText />
@@ -112,7 +112,7 @@ function SliderText() {
   ]);
   return (
     <section className="font-jetbrains dark:text-secondary">
-      <h6 className="capitalize my-20">Testomonials</h6>
+      <h6 className="capitalize mb-24">Testomonials</h6>
       <div
         style={{
           width: "100%",
