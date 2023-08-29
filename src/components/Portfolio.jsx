@@ -107,7 +107,9 @@ function Portfolio() {
         {/* Tab content */}
         <div className="pt-9 px-16">{tabData[activeTab - 1].content}</div>
       </div>
-      <Footer />
+      <span className="hidden +md:block">
+        <Footer />
+      </span>
     </section>
   );
 }
