@@ -48,7 +48,9 @@ function About() {
       <div className="my-5 h-[1px] w-11/12 bg-primary dark:bg-secondary mx-auto"></div>
 
       <SliderText />
-      <Footer />
+      <span className="hidden +md:block">
+        <Footer />
+      </span>
     </section>
   );
 }
