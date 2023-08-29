@@ -57,6 +57,7 @@ function AccordionItem({ banner, setOpen, open }) {
             >
               {banner.id}
             </h1>
+
             <h2 className=" rotate-180 [writing-mode:vertical-lr] font-jetbrains ">
               {banner.title}
             </h2>
