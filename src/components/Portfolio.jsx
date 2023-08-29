@@ -5,6 +5,7 @@ import ContactListImg from "../assets/images/react-mui-contactlist-app.png";
 import NikeShopImg from "../assets/images/nike-shop.png";
 import { BiShow, BiLogoGithub } from "react-icons/bi";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
 
 function Portfolio() {
   const [activeTab, setActiveTab] = useState(1);
@@ -73,7 +74,7 @@ function Portfolio() {
   ]);
 
   return (
-    <section className="mt-11 font-jetbrains text-primary">
+    <section className="mt-11 font-jetbrains text-primary dark:text-secondary">
       <div className="flex flex-col">
         {/* Tab header */}
         <div className="flex justify-between px-16 py-2">
@@ -81,7 +82,15 @@ function Portfolio() {
           <ul className="flex gap-x-6 uppercase">
             {tabData &&
               tabData.map((tab) => (
-                <li
+                <motion.li
+                  whileHover={{
+                    scale: 1.2,
+                    originX: 0,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: "300",
+                  }}
                   key={tab.id}
                   onClick={() => handleActive(tab.id)}
                   className={`cursor-pointer ${
@@ -89,7 +98,7 @@ function Portfolio() {
                   }`}
                 >
                   {tab.title}
-                </li>
+                </motion.li>
               ))}
           </ul>
         </div>
@@ -127,18 +136,46 @@ function ReactProjects({ portfolioData, title }) {
               alt={item.title}
               className="object-cover w-full h-full object-left absolute inset-0 bg-cover z-0"
             />
-            <span className="flex gap-y-24 flex-col opacity-0 hover:opacity-100 duration-500 absolute inset-0 z-10 justify-center items-center text-secondary bg-primary">
+            <span className="flex gap-y-24 flex-col opacity-0 hover:opacity-100 transition-opacity ease-linear delay-75 duration-500 absolute inset-0 z-10 justify-center items-center text-secondary bg-primary">
               <div className="text-4xl flex gap-4">
-                <a href={item.deploy} target="_blank" rel="noreferrer">
+                <motion.a
+                  href={item.deploy}
+                  target="_blank"
+                  rel="noreferrer"
+                  whileHover={{
+                    scale: 1.1,
+                    originX: 0,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: "300",
+                  }}
+                >
                   <BiShow className="hover:text-green-500 duration-500" />
-                </a>
-                <a href={item.github} target="_blank" rel="noreferrer">
+                </motion.a>
+
+                <motion.a
+                  href={item.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  whileHover={{
+                    scale: 1.1,
+                    originX: 0,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: "300",
+                  }}
+                >
                   <BiLogoGithub className="hover:text-blue-500 duration-500" />
-                </a>
+                </motion.a>
               </div>
-              <p className="text-sm p-2 text-center text-secondary">
-                {item.detail}
-              </p>
+              <div className="flex flex-col gap-5 items-center">
+                <h5 className="font-black text-lg">{item.title}</h5>
+                <p className="text-sm p-2 text-center text-secondary">
+                  {item.detail}
+                </p>
+              </div>
             </span>
           </div>
         ))}
