@@ -31,21 +31,29 @@ nav ul li a {
 .alice-carousel__dots-item {
   display: none !important;
 }
-.alice-carousel__prev-btn-wrapper,
-.alice-carousel__next-btn-wrapper {
-  position: relative;
-  left: 310px;
-}
 .alice-carousel__prev-btn-wrapper p,
 .alice-carousel__next-btn-wrapper p {
-  border: 2px solid #222;
+  border: 2px solid #999;
   padding: 0px 10px;
 }
 .alice-carousel__prev-btn-wrapper p span,
 .alice-carousel__next-btn-wrapper p span {
   font-size: 26px;
-  color: #000;
+  color: #999;
 }
-/* .alice-carousel {
-  width: auto;
-} */
+
+@media (min-width: 1023px) {
+  .alice-carousel__prev-btn-wrapper,
+  .alice-carousel__next-btn-wrapper {
+    position: relative;
+    margin-top: 65px;
+    left: 298px;
+  }
+}
+@media (min-width: 1200px) {
+  .alice-carousel__prev-btn-wrapper,
+  .alice-carousel__next-btn-wrapper {
+    margin-top: 0px;
+    left: 310px;
+  }
+}
