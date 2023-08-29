@@ -18,7 +18,7 @@ function About() {
       <section className="flex flex-col lg:flex-row justify-between mt-7 gap-x-11">
         <SliderImage />
 
-        <div className="flex flex-col w-1/2 font-jetbrains pr-14">
+        <div className="flex flex-col w-full lg:w-1/2 font-jetbrains pr-14">
           <h1 className=" text-2xl font-bold">
             <span className="underline underline-offset-8">Ma</span>
             soume Mohebbi
