@@ -41,17 +41,19 @@ function Portfolio() {
     {
       id: 1,
       title: "All",
-      content: <ReactProjects portfolioData={portfolioData} />,
+      content: <ReactProjects portfolioData={portfolioData} title="All" />,
     },
     {
       id: 2,
       title: "React_Js",
-      content: <ReactProjects portfolioData={portfolioData} />,
+      content: <ReactProjects portfolioData={portfolioData} title="React_Js" />,
     },
     {
       id: 3,
       title: "Vanilla_Js",
-      content: <ReactProjects portfolioData={portfolioData} />,
+      content: (
+        <ReactProjects portfolioData={portfolioData} title="Vanilla_Js" />
+      ),
     },
   ]);
 
@@ -87,11 +89,17 @@ function Portfolio() {
 
 export default Portfolio;
 
-function ReactProjects({ portfolioData }) {
+function ReactProjects({ portfolioData, title }) {
+  const currentTab = title;
+  const filteredData =
+    currentTab === "All"
+      ? portfolioData
+      : portfolioData.filter((item) => item.category === currentTab);
+
   return (
     <section className="w-full grid grid-cols-2 gap-5  pb-[50px]">
-      {portfolioData &&
-        portfolioData.map((item) => (
+      {filteredData &&
+        filteredData.map((item) => (
           <div
             key={item.id}
             className="h-80 w-full shadow-md rounded-md overflow-hidden"
