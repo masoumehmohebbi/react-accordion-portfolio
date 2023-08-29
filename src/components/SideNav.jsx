@@ -8,7 +8,7 @@ import DarkModeToggle from "./DarkModeToggle";
 
 function SideNav() {
   return (
-    <nav className="z-50 cursor-default h-full flex flex-col justify-between w-[72px] border-r-[1px] border-primary dark:border-secondary">
+    <nav className="z-50 fixed top-0 cursor-default h-full flex flex-col justify-between w-[72px] border-r-[1px] border-primary dark:border-secondary">
       <div className="flex items-center justify-center ">
         <BiHomeHeart className="w-11 h-11 mt-1 text-primary dark:text-secondary" />
       </div>
