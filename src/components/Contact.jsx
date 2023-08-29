@@ -7,7 +7,7 @@ function Contact() {
   return (
     <section className="font-jetbrains">
       <Map />
-      <div className="flex flex-col lg:flex-row w-[64.9rem] gap-x-16 p-11">
+      <div className="flex flex-col xl:flex-row gap-x-16 p-11">
         <Messages />
         <Details />
       </div>
@@ -33,7 +33,7 @@ function Messages() {
       <form
         onSubmit={HandleSubmitForm}
         action="#"
-        className="gap-y-8 flex flex-col"
+        className="gap-y-8 flex flex-col w-full"
       >
         <input placeholder="Name" type="text" />
         <input placeholder="Email" type="email" />
@@ -54,8 +54,8 @@ function Messages() {
 // Details CMP
 function Details() {
   return (
-    <div className="flex flex-1 flex-col text-primary dark:text-secondary">
-      <h1 className="  text-2xl font-bold pb-9">
+    <div className="flex mt-24 xl:mt-0 flex-1 flex-col text-primary dark:text-secondary">
+      <h1 className="text-2xl font-bold pb-9">
         <span className="underline underline-offset-8">My</span> Details
       </h1>
       <p>
