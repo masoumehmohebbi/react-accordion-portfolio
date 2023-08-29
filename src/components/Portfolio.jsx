@@ -2,6 +2,9 @@ import { useState } from "react";
 import TodoListAppImg from "../assets/images/todo_list.png";
 import FitnessAppImg from "../assets/images/react-fitness-app.png";
 import ContactListImg from "../assets/images/react-mui-contactlist-app.png";
+import NikeShopImg from "../assets/images/nike-shop.png";
+import { BiShow, BiLogoGithub } from "react-icons/bi";
+import Footer from "../components/Footer";
 
 function Portfolio() {
   const [activeTab, setActiveTab] = useState(1);
@@ -13,27 +16,39 @@ function Portfolio() {
   const portfolioData = [
     {
       id: 1,
-      title: "TodoList app",
-      image: TodoListAppImg,
-      category: "React_Js",
-    },
-    {
-      id: 2,
       title: "Fitness App",
       image: FitnessAppImg,
       category: "React_Js",
+      deploy: "https://masoumehmohebbi.github.io/react-fitness-app/",
+      github: "https://github.com/masoumehmohebbi/react-fitness-app",
+      detail: "Hml & TailwindCss & ReactJs & RapidApi",
+    },
+    {
+      id: 2,
+      title: "TodoList app",
+      image: TodoListAppImg,
+      category: "React_Js",
+      deploy: "https://masoumehmohebbi.github.io/react-todo-app/",
+      github: "https://github.com/masoumehmohebbi/react-todo-app",
+      detail: "Hml & TailwindCss & ReactJs",
     },
     {
       id: 3,
       title: "ContactList App",
       image: ContactListImg,
       category: "React_Js",
+      deploy: "https://masoumehmohebbi.github.io/react-mui-contactlist-app/",
+      github: "https://github.com/masoumehmohebbi/react-mui-contactlist-app",
+      detail: "Hml & MaterialUI & ReactJs & Supabase",
     },
     {
       id: 4,
-      title: "ContactList App",
-      image: ContactListImg,
+      title: "Nike Shop",
+      image: NikeShopImg,
       category: "Vanilla_Js",
+      deploy: "https://masoumehmohebbi.github.io/tailwind-css-nike-shop/",
+      github: "https://github.com/masoumehmohebbi/tailwind-css-nike-shop",
+      detail: "Hml & TailwindCss & VanillaJs",
     },
   ];
 
@@ -83,6 +98,7 @@ function Portfolio() {
         {/* Tab content */}
         <div className="pt-9 px-16">{tabData[activeTab - 1].content}</div>
       </div>
+      <Footer />
     </section>
   );
 }
@@ -97,18 +113,33 @@ function ReactProjects({ portfolioData, title }) {
       : portfolioData.filter((item) => item.category === currentTab);
 
   return (
-    <section className="w-full grid grid-cols-2 gap-5  pb-[50px]">
+    <section className="w-full grid grid-cols-2 gap-16  pb-[50px]">
       {filteredData &&
         filteredData.map((item) => (
           <div
             key={item.id}
-            className="h-80 w-full shadow-md rounded-md overflow-hidden"
+            className=" relative h-80 w-full shadow-lg border rounded-md overflow-hidden
+            
+            "
           >
             <img
               src={item.image}
               alt={item.title}
-              className="object-cover w-full h-full object-left "
+              className="object-cover w-full h-full object-left absolute inset-0 bg-cover z-0"
             />
+            <span className="flex gap-y-24 flex-col opacity-0 hover:opacity-100 duration-500 absolute inset-0 z-10 justify-center items-center text-secondary bg-primary">
+              <div className="text-4xl flex gap-4">
+                <a href={item.deploy} target="_blank" rel="noreferrer">
+                  <BiShow className="hover:text-green-500 duration-500" />
+                </a>
+                <a href={item.github} target="_blank" rel="noreferrer">
+                  <BiLogoGithub className="hover:text-blue-500 duration-500" />
+                </a>
+              </div>
+              <p className="text-sm p-2 text-center text-secondary">
+                {item.detail}
+              </p>
+            </span>
           </div>
         ))}
     </section>
