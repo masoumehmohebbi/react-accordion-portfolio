@@ -14,18 +14,18 @@ export default function SkillBar() {
     setToggleState(id);
   };
   return (
-    <section className="mt-24 h-screen relative">
+    <section className="my-24 lg:mb-0 h-screen relative">
       {tabData &&
         tabData.map((tab) => (
           <div key={tab.id} className="flex m-6 h-[140px]">
             <ul className="uppercase flex flex-col gap-y-4">
               <li
                 onClick={() => toggleTab(tab.id)}
-                className={` flex items-end justify-center pb-2  ${
+                className={` flex items-end justify-center pb-2 cursor-pointer  ${
                   toggleState === tab.id
-                    ? "bg-primary text-secondary border border-primary"
-                    : "bg-secondary text-primary"
-                } h-60 w-60 text-primary border border-primary`}
+                    ? "bg-primary dark:bg-secondary text-secondary dark:text-primary border border-primary dark:border-secondary"
+                    : "bg-secondary dark:bg-primary text-primary dark:text-secondary"
+                } h-60 w-36 text-xs lg:text-base xl:w-60 text-primary border border-primary dark:border-secondary`}
               >
                 {tab.title}
               </li>
@@ -72,7 +72,7 @@ function Progressbar({ value }) {
     }
   }, [value]);
   return (
-    <section className=" flex flex-col font-jetbrains pl-16 gap-y-11">
+    <section className=" flex flex-col font-jetbrains pl-5 lg:pl-16 gap-y-11">
       {skillData &&
         skillData.map((item) => (
           <article key={item.id} className="flex flex-col">
@@ -83,9 +83,9 @@ function Progressbar({ value }) {
                 <p>%</p>
               </div>
             </div>
-            <div className="w-[450px] flex justify-start items-stretch rounded-2xl bg-white overflow-hidden">
+            <div className="w-[450px] flex justify-start items-stretch rounded-2xl bg-white dark:bg-black overflow-hidden">
               <motion.div
-                className="w-[0%] border-b-4 border-inset border-primary"
+                className="w-[0%] border-b-4 border-inset border-primary dark:border-secondary"
                 animate={{
                   width: `${item.percent}%`,
                 }}
