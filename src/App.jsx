@@ -4,6 +4,8 @@ import { Typewriter } from "react-simple-typewriter";
 import SideAccordion from "./components/SideAccordion";
 import { motion } from "framer-motion";
 import About from "./components/About";
+import Portfolio from "./components/Portfolio";
+import Contact from "./components/Contact";
 
 export default function App() {
   return (
@@ -14,8 +16,10 @@ export default function App() {
         <SideAccordion />
       </div>
 
-      <div className="+md:hidden">
+      <div className="+md:hidden ml-[90px] +md:ml-0">
         <About />
+        <Portfolio />
+        <Contact />
       </div>
     </section>
   );
