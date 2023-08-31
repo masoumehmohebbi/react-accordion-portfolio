@@ -46,14 +46,14 @@ nav ul li a {
   .alice-carousel__prev-btn-wrapper,
   .alice-carousel__next-btn-wrapper {
     position: relative;
-    margin-top: 65px;
+    margin-top: 98px;
     left: 298px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1330px) {
   .alice-carousel__prev-btn-wrapper,
   .alice-carousel__next-btn-wrapper {
-    margin-top: 0px;
-    left: 310px;
+    margin-top: 11px;
+    left: 330px;
   }
 }
