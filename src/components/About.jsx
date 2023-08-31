@@ -47,7 +47,7 @@ function About() {
 
       <SkillBar />
 
-      <div className="hidden +md:block my-5 h-[1px] w-11/12 bg-primary dark:bg-secondary mx-auto"></div>
+      <div className="hidden mt-[400px] xl:mt-0 +md:block my-5 h-[1px] w-11/12 bg-primary dark:bg-secondary mx-auto"></div>
 
       <SliderText />
       <span className="hidden +md:block">
