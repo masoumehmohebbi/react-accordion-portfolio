@@ -74,15 +74,15 @@ function Portfolio() {
   ]);
 
   return (
-    <section className="mt-11 font-jetbrains text-primary dark:text-secondary">
+    <section className="font-jetbrains text-primary dark:text-secondary sm:mt-12 md:mt-0">
       <div className="flex flex-col">
         {/* Tab header */}
-        <div className="flex justify-between px-16 py-2 flex-col sm:flex-row">
-          <h1 className="text-3xl font-bold uppercase my-9 sm:my-0">
+        <div className="flex justify-between +md:px-16 py-2 flex-col sm:flex-row">
+          <h1 className="text-2xl sm:text-3xl font-bold uppercase my-9 sm:my-0">
             {" "}
             My work
           </h1>
-          <ul className="flex gap-x-6 uppercase">
+          <ul className="flex gap-x-6 uppercase text-xs +md:text-base sm:pr-9">
             {tabData &&
               tabData.map((tab) => (
                 <motion.li
@@ -108,7 +108,9 @@ function Portfolio() {
         <div className="h-[1px] w-11/12 bg-primary dark:bg-secondary mx-auto"></div>
 
         {/* Tab content */}
-        <div className="pt-9 px-16">{tabData[activeTab - 1].content}</div>
+        <div className="pt-9 pr-4 +md:px-16">
+          {tabData[activeTab - 1].content}
+        </div>
       </div>
       <span className="hidden +md:block">
         <Footer />
@@ -127,12 +129,12 @@ function ReactProjects({ portfolioData, title }) {
       : portfolioData.filter((item) => item.category === currentTab);
 
   return (
-    <section className="w-full grid grid-cols-1 +md:grid-cols-2 gap-16  pb-[50px]">
+    <section className="w-full grid grid-cols-1 sm:grid-cols-2 gap-16  pb-[50px]">
       {filteredData &&
         filteredData.map((item) => (
           <div
             key={item.id}
-            className=" relative h-80 w-full shadow-lg border rounded-md overflow-hidden
+            className=" relative h-48 +md:h-56 lg:!h-80 w-full shadow-lg border rounded-md overflow-hidden
             
             "
           >
@@ -141,7 +143,7 @@ function ReactProjects({ portfolioData, title }) {
               alt={item.title}
               className="object-cover w-full h-full object-left absolute inset-0 bg-cover z-0"
             />
-            <span className="flex gap-y-24 flex-col opacity-0 hover:opacity-100 transition-opacity ease-linear delay-75 duration-500 absolute inset-0 z-10 justify-center items-center text-secondary bg-primary">
+            <span className="flex gap-y-9 lg:gap-y-24 flex-col opacity-0 hover:opacity-100 transition-opacity ease-linear delay-75 duration-500 absolute inset-0 z-10 justify-center items-center text-secondary bg-primary">
               <div className="text-4xl flex gap-4">
                 <motion.a
                   href={item.deploy}
