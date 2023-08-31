@@ -1,4 +1,3 @@
-// import Slider from "./Slider";
 import image1 from "../assets/images/slide1.jpg";
 import image2 from "../assets/images/slide2.jpg";
 import image3 from "../assets/images/slide3.jpg";
