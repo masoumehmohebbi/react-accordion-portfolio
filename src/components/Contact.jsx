@@ -7,7 +7,7 @@ function Contact() {
   return (
     <section className="font-jetbrains">
       <Map />
-      <div className="flex flex-col xl:flex-row gap-x-16 p-11">
+      <div className="flex flex-col xl:flex-row gap-x-16 +md:p-11">
         <Messages />
         <Details />
       </div>
@@ -25,15 +25,15 @@ function Messages() {
   };
 
   return (
-    <div className="flex flex-1 flex-col text-primary dark:text-secondary">
-      <h1 className=" text-2xl font-bold pb-9">
+    <div className="flex flex-1 flex-col mt-20 +md:mt-0 text-primary dark:text-secondary">
+      <h1 className="text-2xl font-bold pb-9">
         <span className="underline underline-offset-8">Me</span>
         ssage Me
       </h1>
       <form
         onSubmit={HandleSubmitForm}
         action="#"
-        className="gap-y-8 flex flex-col w-full"
+        className="gap-y-8 flex flex-col w-full pr-4 +md:pr-0"
       >
         <input placeholder="Name" type="text" />
         <input placeholder="Email" type="email" />
@@ -58,23 +58,23 @@ function Details() {
       <h1 className="text-2xl font-bold pb-9">
         <span className="underline underline-offset-8">My</span> Details
       </h1>
-      <p>
+      <p className="text-xs +md:text-base">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto,
         consequatur quam? Nemo amet ad quas nam illo suscipit aspernatur
         eligendi exercitationem nihil quod corporis, deserunt aperiam
         consequuntur nulla velit ipsum.
       </p>
       <div className="flex flex-col gap-y-4 mt-8">
-        <span className="flex gap-x-2 font-semibold text-sm">
-          <BiMailSend className=" p-1 bg-primary dark:bg-secondary text-3xl text-secondary dark:text-primary" />
+        <span className="flex gap-x-2 font-semibold text-xs +md:text-sm">
+          <BiMailSend className=" p-1 bg-primary dark:bg-secondary +md:text-3xl text-secondary dark:text-primary" />
           Masoumeh.mohebbi@gmail.com
         </span>
-        <span className="flex gap-x-2 font-semibold text-sm">
-          <BiPhoneCall className=" p-1 bg-primary dark:bg-secondary text-3xl text-secondary dark:text-primary" />
+        <span className="flex gap-x-2 font-semibold text-xs +md:text-sm">
+          <BiPhoneCall className=" p-1 bg-primary dark:bg-secondary +md:text-3xl text-secondary dark:text-primary" />
           09394296023
         </span>
-        <span className="flex gap-x-2 font-semibold text-sm">
-          <BiMap className=" p-1 bg-primary dark:bg-secondary text-3xl text-secondary dark:text-primary" />
+        <span className="flex gap-x-2 font-semibold text-xs +md:text-sm">
+          <BiMap className=" p-1 bg-primary dark:bg-secondary +md:text-3xl text-secondary dark:text-primary" />
           IR, Guilan, Rasht
         </span>
       </div>
@@ -87,16 +87,23 @@ function Map() {
   const [loaded, setLoaded] = useState(true);
   return (
     <section className="mt-16 text-primary dark:text-secondary">
-      <h1 className="px-11 py-4 text-3xl font-bold"> GET IN TOUCH</h1>
-      <div className="h-[1px] w-11/12 bg-primary dark:bg-secondary mx-auto"></div>
+      <h1 className="sm:px-11 py-4 text-2xl sm:text-3xl font-bold">
+        {" "}
+        GET IN TOUCH
+      </h1>
+      <div className="h-[1px] w-11/12 bg-primary dark:bg-secondary +md:mx-auto"></div>
       {loaded && <Loader />}
       <iframe
         onLoad={() => setLoaded(!loaded)}
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6349.957596401076!2d49.59718440074156!3d37.27192985743835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ff5620d43f15675%3A0x41dd40f9931cfbf6!2z2LHYtNiq2Iwg2KfYs9iq2KfZhiDar9uM2YTYp9mG2Iwg2KfbjNix2KfZhg!5e0!3m2!1sfa!2snl!4v1692967977726!5m2!1sfa!2snl"
         allowfullscreen=""
         loading="lazy"
-        className={`border border-primary m-11 duration-500 
-        ${loaded ? "opacity-0 w-0 h-0" : "opacity-100 w-[90%] h-[300px]"}`}
+        className={`border border-primary mt-11 +md:mx-auto duration-500 
+        ${
+          loaded
+            ? "opacity-0 w-0 h-0"
+            : "opacity-100 rounded-lg w-11/12 min-h-[200px] +md:h-[300px]"
+        }`}
       ></iframe>
     </section>
   );
