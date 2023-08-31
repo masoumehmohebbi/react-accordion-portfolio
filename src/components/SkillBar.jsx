@@ -14,34 +14,48 @@ export default function SkillBar() {
     setToggleState(id);
   };
   return (
-    <section className="my-24 lg:mb-0 h-screen relative">
-      {tabData &&
-        tabData.map((tab) => (
-          <div key={tab.id} className="flex m-6 h-[140px]">
-            <ul className="uppercase flex flex-col gap-y-4">
-              <li
-                onClick={() => toggleTab(tab.id)}
-                className={` flex items-end justify-center pb-2 cursor-pointer  ${
-                  toggleState === tab.id
-                    ? "bg-primary dark:bg-secondary text-secondary dark:text-primary border border-primary dark:border-secondary"
-                    : "bg-secondary dark:bg-primary text-primary dark:text-secondary"
-                } h-60 w-36 text-xs lg:text-base xl:w-60 text-primary border border-primary dark:border-secondary`}
-              >
-                {tab.title}
-              </li>
-            </ul>
-            <div>
-              <div
-                className={`opacity-0 transition-opacity duration-500 ease-out ${
-                  toggleState === tab.id ? "opacity-100" : "opacity-0"
-                }`}
-              >
-                {tab.content}
+    <>
+      <div className="hidden +md:block">
+        <section className="my-24 lg:mb-0 h-screen relative">
+          {tabData &&
+            tabData.map((tab) => (
+              <div key={tab.id} className="flex my-6 h-[140px]">
+                <ul className="uppercase flex flex-col gap-y-4">
+                  <li
+                    onClick={() => toggleTab(tab.id)}
+                    className={` flex items-end justify-center pb-2 cursor-pointer  ${
+                      toggleState === tab.id
+                        ? "bg-primary dark:bg-secondary text-secondary dark:text-primary border border-primary dark:border-secondary"
+                        : "bg-secondary dark:bg-primary text-primary dark:text-secondary"
+                    } h-60 w-36 text-xs lg:text-base xl:w-60 text-primary border border-primary dark:border-secondary`}
+                  >
+                    {tab.title}
+                  </li>
+                </ul>
+                <div>
+                  <div
+                    className={`opacity-0 transition-opacity duration-500 ease-out ${
+                      toggleState === tab.id ? "opacity-100" : "opacity-0"
+                    }`}
+                  >
+                    {tab.content}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        ))}
-    </section>
+            ))}
+        </section>
+      </div>
+      <div className="flex flex-col +md:hidden pr-4">
+        <h1 className="font-black text-lg my-9">Programming skills</h1>
+        <Progressbar />
+        <div className="my-5 h-[1px] w-full bg-primary dark:bg-secondary mx-auto"></div>
+
+        <h1 className="font-black text-2xl">Education</h1>
+        <Education />
+        <h1 className="font-black text-2xl">Experience</h1>
+        <Experience />
+      </div>
+    </>
   );
 }
 
@@ -72,18 +86,18 @@ function Progressbar({ value }) {
     }
   }, [value]);
   return (
-    <section className=" flex flex-col font-jetbrains pl-5 lg:pl-16 gap-y-11">
+    <section className=" flex flex-col font-jetbrains +md:pl-5 lg:pl-16 gap-y-11">
       {skillData &&
         skillData.map((item) => (
           <article key={item.id} className="flex flex-col">
-            <div className="flex justify-between text-base pb-3">
+            <div className="flex justify-between text-base pb-3 w-5/6">
               <h1 className="uppercase">{item.title}</h1>
               <div className="flex">
                 <p ref={progressTextRef}>{item.percent}</p>
                 <p>%</p>
               </div>
             </div>
-            <div className="w-[450px] flex justify-start items-stretch rounded-2xl bg-white dark:bg-black overflow-hidden">
+            <div className="w-5/6 +md:w-[450px] flex justify-start items-stretch rounded-2xl bg-white dark:bg-black overflow-hidden">
               <motion.div
                 className="w-[0%] border-b-4 border-inset border-primary dark:border-secondary"
                 animate={{
@@ -127,7 +141,7 @@ function Education() {
   ]);
 
   return (
-    <section className="absolute top-0 pl-16 pt-7 w-[60%] font-jetbrains">
+    <section className="+md:absolute text-xs +md:text-base top-0 +md:pl-16 pt-7 +md:w-[60%] font-jetbrains">
       <div className=" flex flex-col">
         {educationData &&
           educationData.map((item) => (
@@ -151,7 +165,7 @@ function Education() {
 // Experience CMP
 function Experience() {
   return (
-    <section className="absolute top-0 pl-16 pt-7 w-[60%] font-jetbrains">
+    <section className="+md:absolute top-0 text-xs +md:text-base +md:pl-16 pt-7 +md:w-[60%] font-jetbrains">
       <span className="flex justify-between">
         <h1 className="font-semibold">Front End | Web Developer</h1>
         <h5>2021 - 2023</h5>
