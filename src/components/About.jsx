@@ -12,14 +12,17 @@ import SkillBar from "./SkillBar";
 function About() {
   return (
     <section className="w-full dark:text-secondary font-jetbrains">
-      <h1 className="px-11 py-4 text-3xl font-bold uppercase"> About me</h1>
+      <h1 className="sm:px-11 py-4 text-2xl sm:text-3xl font-bold uppercase">
+        {" "}
+        About me
+      </h1>
       <div className="h-[1px] w-11/12 bg-primary dark:bg-secondary mx-auto"></div>
 
       <section className="flex flex-col lg:flex-row justify-between mt-7 gap-x-11">
         <SliderImage />
 
-        <div className="flex flex-col w-full lg:w-1/2 font-jetbrains pr-14">
-          <h1 className=" text-2xl font-bold">
+        <div className="flex flex-col w-full lg:w-1/2 font-jetbrains mt-5 +md:mt-0 pr-4 +md:pr-14">
+          <h1 className="text-lg sm:text-2xl font-bold">
             <span className="underline underline-offset-8">Ma</span>
             soume Mohebbi
           </h1>
@@ -34,7 +37,7 @@ function About() {
           </p>
           <button
             type="submit"
-            className="mt-11 flex items-center justify-evenly border-[1px] hover:border-primary dark:hover:border-secondary hover:bg-transparent hover:text-primary dark:hover:text-secondary  dark:hover:bg-transparent rounded-3xl bg-primary dark:bg-secondary dark:text-primary text-secondary p-2 w-40 uppercase text-xs duration-500"
+            className="mt-11 flex items-center justify-evenly border-[1px] hover:border-primary dark:hover:border-secondary hover:bg-transparent hover:text-primary dark:hover:text-secondary  dark:hover:bg-transparent rounded-3xl bg-primary dark:bg-secondary dark:text-primary text-secondary p-2 w-32 +md:w-40 uppercase text-xs duration-500"
           >
             Download CV
             <BiDownload className="text-lg" />
@@ -45,7 +48,7 @@ function About() {
 
       <SkillBar />
 
-      <div className="my-5 h-[1px] w-11/12 bg-primary dark:bg-secondary mx-auto"></div>
+      <div className="hidden +md:block my-5 h-[1px] w-11/12 bg-primary dark:bg-secondary mx-auto"></div>
 
       <SliderText />
       <span className="hidden +md:block">
@@ -59,23 +62,23 @@ export default About;
 
 function SliderImage() {
   return (
-    <div className="w-11/12 lg:w-[45%] h-[460px]">
+    <div className="w-11/12 lg:w-[45%] +md:h-[460px]">
       <AliceCarousel disableDotsControls infinite>
         <img
           src={image1}
-          className="w-full h-[400px] object-cover border border-primary"
+          className="w-full max-h-[360px] +md:h-[400px] object-cover border border-primary"
           alt=""
         />
 
         <img
           src={image2}
-          className="w-full h-[400px] object-cover border border-primary"
+          className="w-full  max-h-[360px] +md:h-[400px] object-cover border border-primary"
           alt=""
         />
 
         <img
           src={image3}
-          className="w-full h-[400px] object-cover border border-primary"
+          className="w-full  max-h-[360px] lg:h-[400px] object-cover border border-primary"
           alt=""
         />
       </AliceCarousel>
@@ -106,7 +109,7 @@ function SliderText() {
   ]);
   return (
     <section className="font-jetbrains dark:text-secondary">
-      <h6 className="capitalize mb-24">Testomonials</h6>
+      <h6 className="capitalize mb-9">Testomonials</h6>
       <div
         style={{
           width: "100%",
@@ -118,7 +121,7 @@ function SliderText() {
             data.map((d) => (
               <p
                 key={d.id}
-                className="w-[60%] pl-5 border-l-4 border-primary dark:border-secondary"
+                className="+md:w-[60%] text-xs +md:text-base pl-5 border-l-4 border-primary dark:border-secondary"
               >
                 {d.title}
                 <h6 className="capitalize pt-10 pb-2 text-xs">{d.author}</h6>
