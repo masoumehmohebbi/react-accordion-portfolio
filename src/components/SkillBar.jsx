@@ -86,7 +86,7 @@ function Progressbar({ value }) {
     }
   }, [value]);
   return (
-    <section className=" flex flex-col font-jetbrains +md:pl-5 lg:pl-16 gap-y-11">
+    <section className=" flex flex-col font-jetbrains md:pl-5 +md:pl-16 gap-y-11">
       {skillData &&
         skillData.map((item) => (
           <article key={item.id} className="flex flex-col">
