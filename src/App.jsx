@@ -85,6 +85,7 @@ function Content() {
         </div>
       </main>
       <motion.div
+        style={{ mixBlendMode: "difference" }}
         variants={variants}
         animate={cursorVarient}
         className="cursor -z-20 dark:z-[5] absolute w-4 h-4 bg-[url('/src/assets/images/background.jpg')] bg-[50%_50%] bg-fixed rounded-full bg-no-repeat bg-cover"
