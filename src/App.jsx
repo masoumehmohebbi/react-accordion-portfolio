@@ -9,14 +9,14 @@ import Contact from "./components/Contact";
 
 export default function App() {
   return (
-    <section className="dark:bg-primary cursor-default +md:cursor-none relative w-full h-full overflow-hidden">
+    <section className="dark:bg-primary cursor-none relative w-full h-full overflow-hidden">
       <div className="flex h-screen justify-between w-full pt-5 lg:pt-0">
         <SideNav />
         <Content />
         <SideAccordion />
       </div>
 
-      <div className="+md:hidden ml-[64px] +md:ml-0 cursor-default pr-4">
+      <div className="+md:hidden ml-[64px] +md:ml-0 pr-4">
         <About />
         <Portfolio />
         <Contact />
@@ -57,7 +57,7 @@ function Content() {
       <main
         onMouseEnter={textEnter}
         onMouseLeave={textLeave}
-        className="h-full p-20 sm:w-[calc(100%-65px)] col-span-8 overflow-hidden flex flex-col gap-y-8 items-start justify-end"
+        className="h-full p-20 z-50 sm:w-[calc(100%-65px)] col-span-8 overflow-hidden flex flex-col gap-y-8 items-start justify-end"
       >
         <h1 className="font-Montserrat text-primary dark:text-secondary text-2xl sm:text-4xl lg:text-7xl font-black  uppercase font-test relative">
           IM MASOUME <br /> MOHEBBI.
