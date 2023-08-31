@@ -9,14 +9,14 @@ import Contact from "./components/Contact";
 
 export default function App() {
   return (
-    <section className="dark:bg-primary cursor-none relative w-full h-full overflow-hidden">
+    <section className="dark:bg-primary cursor-default +md:cursor-none relative w-full h-full overflow-hidden">
       <div className="flex h-screen justify-between w-full pt-5 lg:pt-0">
         <SideNav />
         <Content />
         <SideAccordion />
       </div>
 
-      <div className="+md:hidden ml-[90px] +md:ml-0">
+      <div className="+md:hidden ml-[64px] +md:ml-0 cursor-default pr-4">
         <About />
         <Portfolio />
         <Contact />
@@ -57,30 +57,31 @@ function Content() {
       <main
         onMouseEnter={textEnter}
         onMouseLeave={textLeave}
-        className="h-full p-20 w-[calc(100%-65px)] col-span-8 overflow-hidden flex flex-col gap-y-8 items-start justify-end"
+        className="h-full p-20 sm:w-[calc(100%-65px)] col-span-8 overflow-hidden flex flex-col gap-y-8 items-start justify-end"
       >
-        <h1 className="font-Montserrat text-primary dark:text-secondary text-5xl lg:text-7xl font-black  uppercase font-test relative">
+        <h1 className="font-Montserrat text-primary dark:text-secondary text-2xl sm:text-4xl lg:text-7xl font-black  uppercase font-test relative">
           IM MASOUME <br /> MOHEBBI.
         </h1>
-        <div className="font-rubik text-[14px] text-primary dark:text-secondary">
-          Im a freelance{" "}
-          <span className=" bg-[#f7bf00] p-2">
-            <Typewriter
-              words={[
-                "front end engineer.",
-                "web developer.",
-                "coffee drinker.",
-              ]}
-              loop={0}
-              typeSpeed={120}
-              deleteSpeed={80}
-              delaySpeed={1000}
-              cursorStyle="|"
-              cursor
-            />
+        <div className="font-rubik text-[14px] flex flex-col text-primary dark:text-secondary">
+          <span className="flex flex-col sm:flex-row items-center gap-x-1">
+            Im a freelance{" "}
+            <h2 className="bg-[#f7bf00] sm:p-2">
+              <Typewriter
+                words={[
+                  "front end engineer.",
+                  "web developer.",
+                  "coffee drinker.",
+                ]}
+                loop={0}
+                typeSpeed={120}
+                deleteSpeed={80}
+                delaySpeed={1000}
+                cursorStyle="|"
+                cursor
+              />
+            </h2>
           </span>
-          <br />
-          From IR.
+          <span> From IR.</span>
         </div>
       </main>
       <motion.div
