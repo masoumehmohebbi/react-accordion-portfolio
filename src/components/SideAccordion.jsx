@@ -77,11 +77,11 @@ function AccordionItem({ banner, setOpen, open }) {
 // Pdf Viewer Cmp
 function PdfViewer() {
   return (
-    <object
+    <iframe
       width="100%"
       height="100%"
-      data="https://docdro.id/O1i4bjk"
+      src="https://docdro.id/O1i4bjk"
       type="application/pdf"
-    />
+    ></iframe>
   );
 }
