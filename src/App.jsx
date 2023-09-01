@@ -29,17 +29,28 @@ function Content() {
   const magic = useRef(null);
   const [cursorVarient, setCursorVarient] = useState("default");
 
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [width]);
+
   useEffect(() => {
     const magicWHalf = magic.current.offsetWidth / 2;
     const handleMouseMove = (e) => {
       magic.current.style.left = e.pageX - magicWHalf + "px";
       magic.current.style.top = e.pageY - magicWHalf + "px";
     };
-    document.body.addEventListener("mousemove", handleMouseMove);
+    width > 1200 &&
+      document.body.addEventListener("mousemove", handleMouseMove);
     return () => {
       document.body.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [width]);
+
   const variants = {
     default: {
       zIndex: 5,
