@@ -74,7 +74,7 @@ function Content() {
           IM MASOUME <br /> MOHEBBI.
         </h1>
         <div className="font-rubik text-[14px] flex flex-col text-primary dark:text-secondary">
-          <span className="flex flex-col sm:flex-row items-center gap-x-1">
+          <span className="flex flex-col sm:flex-row sm:items-center gap-x-1">
             Im a freelance{" "}
             <h2 className="bg-[#f7bf00] sm:p-2">
               <Typewriter
