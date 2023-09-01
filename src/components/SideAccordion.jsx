@@ -1,5 +1,4 @@
 import { useState } from "react";
-import pdfFile from "../assets/pdf/CV-MasoumeMohebbi.pdf";
 import Contact from "./Contact";
 import About from "./About";
 import Portfolio from "./Portfolio";
@@ -77,8 +76,12 @@ function AccordionItem({ banner, setOpen, open }) {
 
 // Pdf Viewer Cmp
 function PdfViewer() {
-  // return <PDFViewer pdfURL={pdfFile} />;
   return (
-    <object width="100%" height="100%" data={pdfFile} type="application/pdf" />
+    <object
+      width="100%"
+      height="100%"
+      data="https://docdro.id/O1i4bjk"
+      type="application/pdf"
+    />
   );
 }
