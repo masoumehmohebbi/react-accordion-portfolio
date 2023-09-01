@@ -82,7 +82,7 @@ function Portfolio() {
             {" "}
             My work
           </h1>
-          <ul className="flex gap-x-6 uppercase text-xs +md:text-base sm:pr-9">
+          <ul className="flex gap-x-6 uppercase text-xs +md:text-base pl-5 sm:pl-0 sm:pr-9">
             {tabData &&
               tabData.map((tab) => (
                 <motion.li
