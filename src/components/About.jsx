@@ -34,13 +34,15 @@ function About() {
             lacus auctor sit amet. Suspendisse vitae dolor ullamcorper,
             tristique lorem id, faucibus massa.
           </p>
-          <button
-            type="submit"
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.docdroid.net/file/download/O1i4bjk/cv-masoumemohebbi-pdf.pdf"
             className="mt-11 flex items-center justify-evenly border-[1px] hover:border-primary dark:hover:border-secondary hover:bg-transparent hover:text-primary dark:hover:text-secondary  dark:hover:bg-transparent rounded-3xl bg-primary dark:bg-secondary dark:text-primary text-secondary p-2 w-32 +md:w-40 uppercase text-xs duration-500"
           >
             Download CV
             <BiDownload className="text-lg" />
-          </button>
+          </a>
           <div className="mt-4 h-[1px] w-full bg-primary dark:bg-secondary mx-left"></div>
         </div>
       </section>
