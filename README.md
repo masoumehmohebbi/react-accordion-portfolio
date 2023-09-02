@@ -45,7 +45,7 @@ git clone https://github.com/masoumehmohebbi/react-accordion-portfolio/
 npm i
 
 #### Finally, run the `start` script and preview project on a local server:
-npm run start
+npm run dev
 
 ## Author
 <a href="https://www.linkedin.com/in/masoumemohebbi">Masoume mohebbi</a>
