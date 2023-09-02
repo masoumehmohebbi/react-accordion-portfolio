@@ -11,7 +11,11 @@ import DarkModeToggle from "./DarkModeToggle";
 function SideNav({ openMobileNav, setOpenMobileNav }) {
   return (
     <div>
-      {openMobileNav ? <MobileSideNav /> : ""}
+      {openMobileNav ? (
+        <MobileSideNav setOpenMobileNav={setOpenMobileNav} />
+      ) : (
+        ""
+      )}
       <nav
         className={`z-50 ${
           openMobileNav ? "ml-[117px]" : "ml-0"
@@ -32,7 +36,7 @@ function SideNav({ openMobileNav, setOpenMobileNav }) {
           </span>
         </a>
 
-        <ul>
+        <ul className="z-50">
           <li>
             <DarkModeToggle className="w-8 h-8 +md:w-9 +md:h-9" />
           </li>
@@ -71,28 +75,31 @@ function SideNav({ openMobileNav, setOpenMobileNav }) {
 
 export default SideNav;
 
-function MobileSideNav() {
+function MobileSideNav({ setOpenMobileNav }) {
   return (
     <div className="z-50 font-jetbrains transition-all duration-500 bg-primary dark:bg-secondary fixed +md:hidden top-0 cursor-default h-full flex flex-col justify-between border-r-[1px] border-primary dark:border-secondary">
       <ul>
-        <li className="border-b border-b-[#333] py-5 pl-2 pr-11 uppercase">
+        <li className="border-b border-b-[#333] uppercase py-5 pl-2 pr-11">
           <a
+            onClick={() => setOpenMobileNav(false)}
             href="#home"
-            className=" text-[#ffffffcc] dark:text-primary text-xs"
+            className=" text-[#ffffffcc] dark:text-primary text-xs "
           >
             Home
           </a>
         </li>
         <li className="border-b border-b-[#333] py-5 pl-2 pr-11 uppercase">
           <a
+            onClick={() => setOpenMobileNav(false)}
             href="#about"
-            className=" text-[#ffffffcc] dark:text-primary text-xs"
+            className=" text-[#ffffffcc] dark:text-primary text-xs w-full "
           >
             About
           </a>
         </li>
         <li className="border-b border-b-[#333]  py-5 pl-2 pr-11 uppercase">
           <a
+            onClick={() => setOpenMobileNav(false)}
             href="#portfolio"
             className=" text-[#ffffffcc] dark:text-primary text-xs"
           >
@@ -101,6 +108,7 @@ function MobileSideNav() {
         </li>
         <li className="border-b border-b-[#333] py-5 pl-2 pr-11 uppercase">
           <a
+            onClick={() => setOpenMobileNav(false)}
             href="#contact"
             className=" text-[#ffffffcc] dark:text-primary text-xs"
           >
