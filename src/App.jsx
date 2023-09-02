@@ -8,24 +8,33 @@ import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 
 export default function App() {
+  const [openMobileNav, setOpenMobileNav] = useState(false);
+  console.log(openMobileNav);
   return (
-    <section className="dark:bg-primary cursor-none relative w-full h-full overflow-hidden">
+    <section className="dark:bg-primary +md:cursor-none relative w-full h-full overflow-hidden">
       <div className="flex h-screen justify-between w-full pt-5 lg:pt-0">
-        <SideNav />
-        <Content />
+        <SideNav
+          openMobileNav={openMobileNav}
+          setOpenMobileNav={setOpenMobileNav}
+        />
+        <Content openMobileNav={openMobileNav} />
         <SideAccordion />
       </div>
 
-      <div className="+md:hidden ml-[64px] +md:ml-0 pr-4">
+      <div
+        className={` ${
+          openMobileNav ? "ml-[220px]" : "ml-[64px]"
+        } +md:hidden ml-[64px] +md:ml-0 pr-4`}
+      >
         <About />
         <Portfolio />
-        <Contact />
+        <Contact openMobileNav={openMobileNav} />
       </div>
     </section>
   );
 }
 
-function Content() {
+function Content({ openMobileNav }) {
   const magic = useRef(null);
   const [cursorVarient, setCursorVarient] = useState("default");
 
@@ -66,9 +75,12 @@ function Content() {
   return (
     <>
       <main
-        onMouseEnter={textEnter}
-        onMouseLeave={textLeave}
-        className="h-full p-20 z-50 sm:w-[calc(100%-65px)] col-span-8 overflow-hidden flex flex-col gap-y-8 items-start justify-end"
+        onMouseEnter={width > 1200 && textEnter}
+        onMouseLeave={width > 1200 && textLeave}
+        id="home"
+        className={` ${
+          openMobileNav ? "ml-[140px]" : ""
+        } h-full p-20  sm:w-[calc(100%-65px)] col-span-8 overflow-hidden flex flex-col gap-y-8 items-start justify-end`}
       >
         <h1 className="font-Montserrat text-primary dark:text-secondary text-2xl sm:text-4xl lg:text-7xl font-black  uppercase font-test relative">
           IM MASOUME <br /> MOHEBBI.
