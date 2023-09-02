@@ -5,7 +5,7 @@ import Loader from "./Loader";
 
 function Contact() {
   return (
-    <section className="font-jetbrains">
+    <section id="contact" className="font-jetbrains">
       <Map />
       <div className="flex flex-col xl:flex-row gap-x-16 +md:p-11">
         <Messages />
@@ -66,15 +66,15 @@ function Details() {
       </p>
       <div className="flex flex-col gap-y-4 mt-8">
         <span className="flex gap-x-2 font-semibold text-xs +md:text-sm">
-          <BiMailSend className=" p-1 bg-primary dark:bg-secondary +md:text-3xl text-secondary dark:text-primary" />
+          <BiMailSend className="p-1 bg-primary dark:bg-secondary text-xl +md:text-3xl text-secondary dark:text-primary" />
           Masoumeh.mohebbi@gmail.com
         </span>
         <span className="flex gap-x-2 font-semibold text-xs +md:text-sm">
-          <BiPhoneCall className=" p-1 bg-primary dark:bg-secondary +md:text-3xl text-secondary dark:text-primary" />
+          <BiPhoneCall className="p-1 bg-primary dark:bg-secondary text-xl +md:text-3xl text-secondary dark:text-primary" />
           09394296023
         </span>
         <span className="flex gap-x-2 font-semibold text-xs +md:text-sm">
-          <BiMap className=" p-1 bg-primary dark:bg-secondary +md:text-3xl text-secondary dark:text-primary" />
+          <BiMap className="p-1 bg-primary dark:bg-secondary text-xl +md:text-3xl text-secondary dark:text-primary" />
           IR, Guilan, Rasht
         </span>
       </div>
