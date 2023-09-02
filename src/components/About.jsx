@@ -10,7 +10,7 @@ import SkillBar from "./SkillBar";
 
 function About() {
   return (
-    <section className="w-full dark:text-secondary font-jetbrains">
+    <section id="about" className="w-full dark:text-secondary font-jetbrains">
       <h1 className="sm:px-11 py-4 text-2xl sm:text-3xl font-bold uppercase">
         {" "}
         About me
