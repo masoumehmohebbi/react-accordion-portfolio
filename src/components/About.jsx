@@ -37,7 +37,7 @@ function About() {
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://www.docdroid.net/file/download/O1i4bjk/cv-masoumemohebbi-pdf.pdf"
+            href="https://www.docdroid.net/file/download/ci4rsMA/cv-masoumemohebbi-pdf.pdf"
             className="mt-11 flex items-center justify-evenly border-[1px] hover:border-primary dark:hover:border-secondary hover:bg-transparent hover:text-primary dark:hover:text-secondary  dark:hover:bg-transparent rounded-3xl bg-primary dark:bg-secondary dark:text-primary text-secondary p-2 w-32 +md:w-40 uppercase text-xs duration-500"
           >
             Download CV
