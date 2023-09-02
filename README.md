@@ -13,11 +13,17 @@ This is a Personal CV application. which I developed it with the TailwindCss lib
 
 ## Features
 🔥 Responsive styles
+<br />
 📱 React Pdf Reader
+<br />
 ✅ Vertical Accordion
+<br />
 ⚡️ Custom Circle Cursor
+<br />
 🧾 Personal CV
+<br />
 📀loader Spinner
+<br />
 🐈‍⬛ Dark Mode
 
 ## Requirements
