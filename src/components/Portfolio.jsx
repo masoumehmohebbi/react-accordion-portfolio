@@ -129,7 +129,10 @@ function ReactProjects({ portfolioData, title }) {
       : portfolioData.filter((item) => item.category === currentTab);
 
   return (
-    <section className="w-full grid grid-cols-1 sm:grid-cols-2 gap-16  pb-[50px]">
+    <section
+      id="portfolio"
+      className="w-full grid grid-cols-1 sm:grid-cols-2 gap-16  pb-[50px]"
+    >
       {filteredData &&
         filteredData.map((item) => (
           <div
