@@ -9,7 +9,7 @@ React Accordion Portfolio App, based on TailwindCss library And ReactJs
 </figure>
 
 ## Description
-This is a Personal CV application. which I developed it with the TailwindCss library and the ReactJs library. My main goal was building a Vertical accordion but at the end it bacame to a personal accordion portfolio (❀❛ ֊ ❛„)♡
+This is a Personal CV application. which I developed it with the TailwindCss library and the ReactJs library.In this project i developed a custom circle cursor that apears a part of backgroundImage with hovering. My main goal was building a Vertical accordion but at the end it bacame to a personal accordion portfolio (❀❛ ֊ ❛„)♡
 
 ## Features
 🔥 Responsive styles
@@ -17,7 +17,8 @@ This is a Personal CV application. which I developed it with the TailwindCss lib
 ✅ Vertical Accordion
 ⚡️ Custom Circle Cursor
 🧾 Personal CV
-📀loader-spinner
+📀loader Spinner
+🐈‍⬛ Dark Mode
 
 ## Requirements
 <ul>
