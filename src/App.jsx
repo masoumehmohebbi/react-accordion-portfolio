@@ -23,7 +23,7 @@ export default function App() {
 
       <div
         className={` ${
-          openMobileNav ? "ml-[220px]" : "ml-[64px]"
+          openMobileNav ? "ml-[220px]" : ""
         } +md:hidden ml-[64px] +md:ml-0 pr-4`}
       >
         <About />
@@ -80,7 +80,7 @@ function Content({ openMobileNav }) {
         id="home"
         className={` ${
           openMobileNav ? "ml-[140px]" : ""
-        } h-full p-20  sm:w-[calc(100%-65px)] col-span-8 overflow-hidden flex flex-col gap-y-8 items-start justify-end`}
+        } h-full p-20 flex-1 sm:w-[calc(100%-65px)] col-span-8 overflow-hidden flex flex-col gap-y-8 items-start justify-end`}
       >
         <h1 className="font-Montserrat text-primary dark:text-secondary text-2xl sm:text-4xl lg:text-7xl font-black  uppercase font-test relative">
           IM MASOUME <br /> MOHEBBI.
