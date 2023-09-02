@@ -1,5 +1,5 @@
-# react-mui-contactlist-app
-React ContactList App, based on Material-UI library And Supabase-DB
+# react-accordion-portfolio
+React Accordion Portfolio App, based on TailwindCss library And ReactJs
 
 <figure>
   <img src="https://github.com/masoumehmohebbi/react-accordion-portfolio/blob/main/react-accordion-portfolio-IMG1.PNG"/>
@@ -15,9 +15,10 @@ This application has features such as deleting, adding, editing, viewing more in
 
 ## Features
 🔥 Responsive styles
-📱 Add, Delete, Edit Users
-✅ viewing more information About Users
-⚡️ Search Users
+📱 React Pdf Reader
+✅ Vertical Accordion
+⚡️ Custom Circle Cursor
+ Personal CV
 
 ## Requirements
 <ul>
