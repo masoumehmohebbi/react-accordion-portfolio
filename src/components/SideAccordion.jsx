@@ -2,9 +2,7 @@ import { useState } from "react";
 import Contact from "./Contact";
 import About from "./About";
 import Portfolio from "./Portfolio";
-
-// import PDFViewer from "tailwind-pdf-viewer";
-// import "tailwind-pdf-viewer/style.css";
+import { Scrollbars } from "react-custom-scrollbars";
 
 function SideAccordion() {
   const [open, setOpen] = useState(null);
@@ -65,7 +63,7 @@ function AccordionItem({ banner, setOpen, open }) {
       </div>
       {isOpen ? (
         <article className="w-[calc(100%-70px)] overflow-y-visible overflow-x-hidden">
-          {banner.component}
+          <Scrollbars>{banner.component}</Scrollbars>
         </article>
       ) : (
         ""
@@ -77,11 +75,14 @@ function AccordionItem({ banner, setOpen, open }) {
 // Pdf Viewer Cmp
 function PdfViewer() {
   return (
-    <iframe
-      width="100%"
-      height="100%"
-      src="https://docdro.id/O1i4bjk"
-      type="application/pdf"
-    ></iframe>
+    <Scrollbars>
+      <iframe
+        width="100%"
+        height="100%"
+        style={{ overflow: "hidden" }}
+        src="https://docdro.id/O1i4bjk"
+        type="application/pdf"
+      ></iframe>
+    </Scrollbars>
   );
 }
