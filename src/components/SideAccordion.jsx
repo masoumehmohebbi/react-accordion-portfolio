@@ -80,7 +80,7 @@ function PdfViewer() {
         width="100%"
         height="100%"
         style={{ overflow: "hidden" }}
-        src="https://docdro.id/O1i4bjk"
+        src="https://docdro.id/ci4rsMA"
         type="application/pdf"
       ></iframe>
     </Scrollbars>
