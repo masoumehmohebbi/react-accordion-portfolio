@@ -14,7 +14,7 @@ This is a Personal CV application. which I developed it with the TailwindCss lib
 ## Features
 🔥 Responsive styles
 <br />
-📱 React Pdf Reader
+📱 React Pdf Viewer
 <br />
 ✅ Vertical Accordion
 <br />
