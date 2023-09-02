@@ -74,7 +74,10 @@ function Portfolio() {
   ]);
 
   return (
-    <section className="font-jetbrains text-primary dark:text-secondary sm:mt-12 md:mt-0">
+    <section
+      id="portfolio"
+      className="font-jetbrains text-primary dark:text-secondary sm:mt-12 md:mt-0"
+    >
       <div className="flex flex-col">
         {/* Tab header */}
         <div className="flex justify-between +md:px-16 py-2 flex-col sm:flex-row">
@@ -129,10 +132,7 @@ function ReactProjects({ portfolioData, title }) {
       : portfolioData.filter((item) => item.category === currentTab);
 
   return (
-    <section
-      id="portfolio"
-      className="w-full grid grid-cols-1 sm:grid-cols-2 gap-16  pb-[50px]"
-    >
+    <section className="w-full grid grid-cols-1 sm:grid-cols-2 gap-16  pb-[50px]">
       {filteredData &&
         filteredData.map((item) => (
           <div
